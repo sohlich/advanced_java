@@ -46,6 +46,7 @@
 - JSR 342
 - Glassfish 4 - reference implementation
 - Java EE 8 (JSR 366) in progress (hopefully H1 2017)
+
 ## Tiers
 - **EJB Container**
 - **WEB Container**
@@ -59,6 +60,7 @@
   - CDI - Weld
   - JAX-RS - Jersey
   - container is then interface between deployed application and application server
+
 ## Typical EE Application
 - Multi-Tier
 - Client - Browser,SPA
