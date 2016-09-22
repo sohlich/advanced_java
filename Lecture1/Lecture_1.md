@@ -52,6 +52,7 @@
 - **WEB Container**
 - Application Client container
 - Java Applets
+
 ![java ee tiers](http://abhirockzz.files.wordpress.com/2014/01/containers.png)
 
 ## Container services
