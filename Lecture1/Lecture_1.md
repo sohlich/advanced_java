@@ -67,28 +67,28 @@
 ## EE Web Profile
 - subset of Java EE specification sufficient for typical web applications
 - APIs:
-**  - **Java Servlet API 3.1
-**  - **EJB Lite 3.2
-**  - **CDI 1.1
-**  - **JSF 2.2
-**  - **JTA 1.2
-**  - **JPA 2.1
-**  - **Web Socket 1.0
-**  - **Bean Validation 1.1
-**  - **JAX-RS 2.0
-**  - **JSON-P 1.0
+++Java Servlet API 3.1
+++EJB Lite 3.2
+++CDI 1.1
+++JSF 2.2
+++JTA 1.2
+++JPA 2.1
+++Web Socket 1.0
+++Bean Validation 1.1
+++JAX-RS 2.0
+++JSON-P 1.0
 
 **## EE Full Profile
 - Complete set of API that matches the Platform Edition specification
 - Java EE 7 compliant MUST HAVE
 - APIs:
-  - **JTA
-**  - **JMS
-**  - **EJB
-**  - **Managed Beans
-**  - **JDBC
-**  - **JPA
-**  - **JNDI
-**  - **JAX-RS
-**  - **JAX-WS
-**  - **JavaMail
+++JTA
+++JMS
+++EJB
+++Managed Beans
+++JDBC
+++JPA
+++JNDI
+++JAX-RS
+++JAX-WS
+++JavaMail
