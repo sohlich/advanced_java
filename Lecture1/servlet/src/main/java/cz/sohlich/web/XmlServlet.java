@@ -1,7 +1,6 @@
 package cz.sohlich.web;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -9,10 +8,12 @@ import java.io.IOException;
 import java.util.Base64;
 
 /**
+ * This servlet is added via descriptor
+ * web.xml located in WEB-INF folder.
+ *
  * Created by radek on 7/8/16.
  */
-@WebServlet(name = "Home", urlPatterns = "/login")
-public class HomeServlet extends HttpServlet {
+public class XmlServlet extends HttpServlet {
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -24,13 +25,7 @@ public class HomeServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String html = "<html>" +
-                "<form action=\"login\" method=\"POST\">" +
-                "Login: <input type=\"text\" name=\"login\"><br/>" +
-                "Password: <input type=\"password\" name=\"password\"><br/>" +
-                "<input type=\"submit\" value=\"Login\">" +
-                "</form>" +
-                "</html>";
+        String html = "Xml";
         response.getWriter().write(html);
     }
 }

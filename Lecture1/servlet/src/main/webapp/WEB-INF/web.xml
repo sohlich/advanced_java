@@ -10,4 +10,14 @@
         <welcome-file>login</welcome-file>
     </welcome-file-list>
 
+    <servlet>
+        <servlet-name>XmlServlet</servlet-name>
+        <servlet-class>cz.sohlich.web.XmlServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>XmlServlet</servlet-name>
+        <url-pattern>/xml</url-pattern>
+    </servlet-mapping>
+
 </web-app>
