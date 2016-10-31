@@ -4,6 +4,7 @@ import cz.fai.blog.dto.PostDto;
 import cz.fai.blog.manager.PostManager;
 
 import javax.inject.Inject;
+import javax.jws.WebParam;
 import javax.jws.WebService;
 import java.util.List;
 
@@ -20,5 +21,14 @@ public class PostWebService {
         return postManager.getAllPublished();
     }
 
+
+    public PostDto getOne(@WebParam(name = "id") Integer id) {
+        return postManager.getOne(id);
+    }
+
+    public PostDto createOne(PostDto post, @WebParam(name = "author") Integer
+            author) {
+        return postManager.createPostFor(author, post);
+    }
 
 }
