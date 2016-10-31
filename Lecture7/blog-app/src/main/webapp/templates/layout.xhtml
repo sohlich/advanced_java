@@ -2,7 +2,10 @@
 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui">
+
 
 <h:head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
@@ -11,12 +14,34 @@ Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <h:body>
     <div class="header">
-        Header
+        <div>
+            <h1>Simple blog</h1>
+        </div>
+        <h:outputLabel
+                rendered="#{not empty appSession.user}">Logged as
+            ${appSession.user.email}</h:outputLabel>
+
+        <h:form>
+            <p:menubar styleClass="menu">
+                <p:menuitem url="login.xhtml"
+                            rendered="#{empty appSession.user}">Login</p:menuitem>
+                <c:if test="#{not empty appSession.user}">
+                    <p:submenu label="Posts">
+                        <p:menuitem url="myposts.xhtml">My posts</p:menuitem>
+                        <p:menuitem url="editpost.xhtml">New post</p:menuitem>
+                    </p:submenu>
+                    <p:menuitem action="#{loginController.doLogout}"
+                                ajax="false">
+                        Logout
+                    </p:menuitem>
+                </c:if>
+            </p:menubar>
+        </h:form>
     </div>
-
+    <hr></hr>
     <ui:insert name="body_content"/>
-
-    <div class="header">
+    <hr></hr>
+    <div class="footer">
         Footer
     </div>
 </h:body>
