@@ -106,6 +106,12 @@ is defined through the Java API for XML Binding (JAXB)
 # SOAP - Client API
 TODO
 
+# WebSocket API
+- WebSocket is defined as JSR 356
+- full duplex protocol over TCP connection
+- protocol upgrade after handshake
+- messages composed of one or more frames
+- application / control frames
 
 
   
