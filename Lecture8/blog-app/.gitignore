@@ -8,6 +8,9 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+.idea
+nb-configuration.xml
+blog-app.iml
 
 
 ### Maven ###
