@@ -10,9 +10,16 @@
         <welcome-file>login</welcome-file>
     </welcome-file-list>
 
+    <listener>
+        <listener-class>
+            cz.sohlich.app.AppContextListener
+        </listener-class>
+    </listener>
+
+
     <servlet>
         <servlet-name>XmlServlet</servlet-name>
-        <servlet-class>cz.sohlich.web.XmlServlet</servlet-class>
+        <servlet-class>cz.sohlich.web.servlet.XmlServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>

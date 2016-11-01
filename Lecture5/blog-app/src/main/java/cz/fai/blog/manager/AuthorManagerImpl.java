@@ -41,4 +41,10 @@ public class AuthorManagerImpl implements AuthorManager {
         return AuthorDto.from(authorDao.insert(entity));
     }
 
+    @Override
+    public AuthorDto findAuthorByEmailAndPassword(String email, String pass) {
+        AuthorEntity author = authorDao.byEmailAndPassword(email, pass);
+        return author != null ? AuthorDto.from(author) : null;
+    }
+
 }

@@ -9,6 +9,7 @@ import cz.fai.blog.exception.RecordNotFoundException;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.ejb.Stateless;
+import javax.faces.bean.ManagedBean;
 import javax.inject.Inject;
 
 /**
@@ -17,6 +18,7 @@ import javax.inject.Inject;
  * @author František Špaček
  */
 @Stateless
+@ManagedBean(name = "postManager")
 public class PostManagerImpl implements PostManager {
 
     private PostDao postDao;

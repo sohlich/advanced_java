@@ -8,7 +8,9 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-
+.idea
+*.iml
+nb-configuration.xml
 
 ### Maven ###
 target/

@@ -1,4 +1,4 @@
-package cz.sohlich.web;
+package cz.sohlich.web.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

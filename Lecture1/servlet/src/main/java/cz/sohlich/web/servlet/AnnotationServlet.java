@@ -1,4 +1,4 @@
-package cz.sohlich.web;
+package cz.sohlich.web.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,7 +16,6 @@ import java.util.Base64;
  */
 @WebServlet(name = "Home", urlPatterns = "/annotation")
 public class AnnotationServlet extends HttpServlet {
-
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("login");

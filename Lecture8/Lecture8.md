@@ -103,8 +103,6 @@ is defined through the Java API for XML Binding (JAXB)
 - wsdlLocation - Location of a predefined WSDL describing the service
 
 
-# SOAP - Client API
-TODO
 
 
 

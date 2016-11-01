@@ -8,4 +8,5 @@ import cz.fai.blog.domain.AuthorEntity;
  */
 public interface AuthorDao extends CrudDao<AuthorEntity, Integer> {
 
+    AuthorEntity byEmailAndPassword(String email, String Password);
 }
