@@ -114,6 +114,7 @@ is defined through the Java API for XML Binding (JAXB)
 
 # Java EE - implemetation
 - annotation @ServerEndpoint
+- handling events of enpoint @OnOpen,@OnMessage,@OnClose
 
 ```
 @ServerEndpoint(value = "/chat/{room}")
