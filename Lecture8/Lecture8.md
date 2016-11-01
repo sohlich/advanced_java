@@ -112,4 +112,29 @@ is defined through the Java API for XML Binding (JAXB)
 - application / control frames
 
 
+# Java EE - implemetation
+- annotation @ServerEndpoint
+
+```
+@ServerEndpoint(value = "/chat/{room}")
+public class ChatEndpoint {
+
+    // Handling endpoint events
+    @OnOpen
+    public void onOpen(Session session) throws IOException {
+        session.getBasicRemote().sendText("Welcome to Blog Chat");
+    }
+
+    @OnMessage
+    public String receiveMessage(String message,) {
+        return "received";
+    }
+
+    @OnClose
+    public void onClose(Session session) throws IOException {
+        session.getBasicRemote().sendText("Bye bye. See you soon.");
+    }
+}
+```
+
   
