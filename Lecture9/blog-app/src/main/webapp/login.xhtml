@@ -1,0 +1,21 @@
+<ui:composition template="/templates/layout.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html">
+    <ui:define name="body_content">
+        <h:form>
+            <h:message for="login" style="color:red"/><br/>
+            <h:outputLabel>Email:</h:outputLabel>
+            <h:inputText id="login" value="#{loginController.login}"
+                         validator="#{loginController.validateLogin}"/>
+            <br/>
+            <h:outputLabel>Password:</h:outputLabel>
+            <h:inputSecret
+                    required="true" requiredMessage="Password must be entered"
+                    value="#{loginController.password}"/>
+            <br/>
+            <h:commandButton
+                    action="#{loginController.doLogin}" value="Login"/>
+        </h:form>
+    </ui:define>
+</ui:composition>
