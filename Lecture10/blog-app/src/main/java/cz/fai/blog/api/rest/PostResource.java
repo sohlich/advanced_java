@@ -29,21 +29,17 @@ public class PostResource {
     @Inject
     SessionBean sessionBean;
 
+
     @Context
     Application app;
-
     @Context
     UriInfo uri;
-
     @Context
     HttpHeaders headers;
-
     @Context
     Request request;
-
     @Context
     SecurityContext security;
-
     @Context
     Providers providers;
 
@@ -65,5 +61,6 @@ public class PostResource {
     public PostDto createOne(PostDto post, @QueryParam("author") Integer author) {
         return postManager.createPostFor(author, post);
     }
+
 
 }

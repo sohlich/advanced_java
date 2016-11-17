@@ -12,10 +12,13 @@ import javax.faces.validator.ValidatorException;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.IOException;
+<<<<<<< HEAD
 import static java.lang.String.format;
 import javax.annotation.Resource;
 import javax.jms.Destination;
 import javax.jms.JMSContext;
+=======
+>>>>>>> 6f6ecc94441eedad94a281af9787ea4dfe0f84ef
 
 /**
  * Created by Radomir Sohlich on 10/29/16.
@@ -33,6 +36,7 @@ public class LoginController {
     @Inject
     private SessionBean sessionBean;
 
+<<<<<<< HEAD
     private JMSContext context;
     private Destination notifications;
 
@@ -45,6 +49,8 @@ public class LoginController {
     public void setNotifications(Destination notifications) {
         this.notifications = notifications;
     }
+=======
+>>>>>>> 6f6ecc94441eedad94a281af9787ea4dfe0f84ef
 
     public String doLogout() throws IOException {
         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
@@ -56,8 +62,11 @@ public class LoginController {
                 password);
         if (authorDto != null) {
             sessionBean.setUser(authorDto);
+<<<<<<< HEAD
             context.createProducer().send(notifications, format("User %s successfully logged", authorDto.getEmail()));
 
+=======
+>>>>>>> 6f6ecc94441eedad94a281af9787ea4dfe0f84ef
             return "index.xhtml?faces-redirect=true";
         } else {
             return "login.xhtml?faces-redirect=true";
@@ -65,10 +74,17 @@ public class LoginController {
     }
 
     public void validateLogin(FacesContext context, UIComponent component,
+<<<<<<< HEAD
             Object value) throws ValidatorException {
         if (value == null || ((String) value).isEmpty()) {
             throw new ValidatorException(new FacesMessage("login cannot be "
                     + "null"));
+=======
+                              Object value) throws ValidatorException {
+        if (value == null || ((String) value).isEmpty()) {
+            throw new ValidatorException(new FacesMessage("login cannot be " +
+                    "null"));
+>>>>>>> 6f6ecc94441eedad94a281af9787ea4dfe0f84ef
         }
     }
 

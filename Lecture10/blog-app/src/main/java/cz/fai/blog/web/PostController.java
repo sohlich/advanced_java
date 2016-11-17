@@ -3,8 +3,11 @@ package cz.fai.blog.web;
 import cz.fai.blog.bean.SessionBean;
 import cz.fai.blog.dto.PostDto;
 import cz.fai.blog.manager.PostManager;
+<<<<<<< HEAD
 import cz.fai.utb.mail.client.EmailClient;
 import cz.fai.utb.mail.client.EmailMessageBuilder;
+=======
+>>>>>>> 6f6ecc94441eedad94a281af9787ea4dfe0f84ef
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
@@ -26,9 +29,13 @@ public class PostController {
 
     @Inject
     SessionBean sessionBean;
+<<<<<<< HEAD
     
     @Inject
     private EmailClient emailClient;
+=======
+
+>>>>>>> 6f6ecc94441eedad94a281af9787ea4dfe0f84ef
 
     PostDto postDto;
 
@@ -58,6 +65,7 @@ public class PostController {
         } else {
             postManager.updatePost(postDto.getId(), postDto);
         }
+<<<<<<< HEAD
         
         if(postDto.isPublished()){
             emailClient.sendMessage(new EmailMessageBuilder()
@@ -66,6 +74,8 @@ public class PostController {
                     .text("New update in blog post...")
                     .build());
         }
+=======
+>>>>>>> 6f6ecc94441eedad94a281af9787ea4dfe0f84ef
 
         return "index.xhtml";
     }

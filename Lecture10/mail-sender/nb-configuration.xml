@@ -15,5 +15,9 @@ Any value defined here will override the pom.xml file value but is only applicab
 -->
         <org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_j2eeVersion>1.7-web</org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_j2eeVersion>
         <org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_deploy_2e_server>WildFly</org-netbeans-modules-maven-j2ee.netbeans_2e_hint_2e_deploy_2e_server>
+<<<<<<< HEAD
+=======
+        <netbeans.hint.jdkPlatform>JDK 1.7</netbeans.hint.jdkPlatform>
+>>>>>>> 6f6ecc94441eedad94a281af9787ea4dfe0f84ef
     </properties>
 </project-shared-configuration>

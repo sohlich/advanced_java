@@ -4,12 +4,20 @@ import cz.fai.blog.dao.AuthorDao;
 import cz.fai.blog.domain.AuthorEntity;
 import cz.fai.blog.dto.AuthorDto;
 import cz.fai.blog.logging.LogAround;
+<<<<<<< HEAD
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.NoResultException;
 import java.util.List;
 import java.util.stream.Collectors;
+=======
+import java.util.List;
+import java.util.stream.Collectors;
+import javax.ejb.Stateless;
+import javax.inject.Inject;
+import javax.persistence.NoResultException;
+>>>>>>> 6f6ecc94441eedad94a281af9787ea4dfe0f84ef
 
 /**
  * Implementation of {@link AuthorManager}.
@@ -29,6 +37,10 @@ public class AuthorManagerImpl implements AuthorManager {
 
     @Override
     public List<AuthorDto> getAuthors() {
+<<<<<<< HEAD
+=======
+        authorDao.something();
+>>>>>>> 6f6ecc94441eedad94a281af9787ea4dfe0f84ef
         return authorDao.fetchAll().stream()
                 .map(AuthorDto::from)
                 .collect(Collectors.toList());
@@ -39,6 +51,10 @@ public class AuthorManagerImpl implements AuthorManager {
         if(authorDto == null){
             throw new IllegalArgumentException("authorDto cannot be null");
         }
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 6f6ecc94441eedad94a281af9787ea4dfe0f84ef
         final AuthorEntity entity = new AuthorEntity();
         entity.setEmail(authorDto.getEmail());
         entity.setFirstName(authorDto.getFirstName());
