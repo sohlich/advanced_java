@@ -2,10 +2,6 @@ package cz.fai.blog.dao.impl;
 
 import cz.fai.blog.dao.AuthorDao;
 import cz.fai.blog.domain.AuthorEntity;
-<<<<<<< HEAD
-
-=======
->>>>>>> 6f6ecc94441eedad94a281af9787ea4dfe0f84ef
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -20,11 +16,6 @@ public class AuthorDaoImpl extends SimpleCrudDao<AuthorEntity, Integer> implemen
         super(entityManager, AuthorEntity.class);
     }
 
-
-<<<<<<< HEAD
-    @Override
-=======
->>>>>>> 6f6ecc94441eedad94a281af9787ea4dfe0f84ef
     public AuthorEntity findByEmailAndPassword(String email, String password) {
         return entityManager.createQuery("select a from AuthorEntity a where a.email=:email and a.password=:password",
                 AuthorEntity.class)
@@ -32,12 +23,9 @@ public class AuthorDaoImpl extends SimpleCrudDao<AuthorEntity, Integer> implemen
                 .setParameter("password", password)
                 .getSingleResult();
     }
-<<<<<<< HEAD
-=======
 
     @Override
     public void something() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
->>>>>>> 6f6ecc94441eedad94a281af9787ea4dfe0f84ef
 }

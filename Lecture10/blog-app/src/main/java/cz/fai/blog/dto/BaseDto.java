@@ -11,13 +11,9 @@ public class BaseDto<PrimaryKeyType extends Integer> implements Serializable {
 
     private PrimaryKeyType id;
 
-<<<<<<< HEAD
     public BaseDto() {
     }
 
-    
-=======
->>>>>>> 6f6ecc94441eedad94a281af9787ea4dfe0f84ef
     public BaseDto(PrimaryKeyType id) {
         this.id = id;
     }
