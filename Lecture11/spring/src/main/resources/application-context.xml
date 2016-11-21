@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd
+	   					   http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <context:component-scan base-package="cz.sohlich.spring"/>
+
+    <!--Simple bean-->
+    <bean id="sampleBean"
+          class="cz.sohlich.spring.bean.SampleBean">
+    </bean>
+
+    <!--Using references-->
+    <bean id="dependent" class="cz.sohlich.spring.bean.DependentBean">
+        <constructor-arg name="injectedBean"
+                         ref="sampleBean"></constructor-arg>
+    </bean>
+
+    <bean id="dependentTwo" class="cz.sohlich.spring.bean.DependentBean"
+          autowire="constructor">
+    </bean>
+
+
+    <!--Using inheritance-->
+    <bean id="dependentChild" class="cz.sohlich.spring.bean.ChildDependentBean"
+          parent="dependent">
+    </bean>
+
+
+    <!--Abstract bean as a template for all other-->
+    <bean id="beanTeamplate" abstract="true">
+        <property name="message1" value="Hello World!"/>
+        <property name="message2" value="Hello Second World!"/>
+        <property name="message3" value="Namaste India!"/>
+    </bean>
+
+</beans>
